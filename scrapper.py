@@ -13,13 +13,13 @@ soup = bs(response.text, 'html.parser')
 
 print(f'Page Title: {soup.title.text}\n')
 
-print("Extracting jobs...")
+print('Extracting jobs...')
 job_list = soup.find('ol', class_='list-recent-jobs')
 
 if job_list:
     jobs = job_list.find_all('li')
     print(f'Found {len(jobs)} jobs on the page.\n')
-    
+
     print("Here are the first 5 jobs:")
     for job in jobs[:5]:
         title_element = job.find('h2').find('a') if job.find('h2') else None
