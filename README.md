@@ -1,2 +1,2 @@
 # job-skill-scrapper
-A Python script to scrape job boards for common skills
+Script simples de python pra extrair informações de página web
